@@ -1,38 +1,38 @@
-import { css, SerializedStyles } from "@emotion/react";
-import styled from "@emotion/styled";
-import { MouseEvent } from "react";
-import { boxShadow, transition } from "@/components/styles";
-import { AppTheme } from "@/styles/themes";
+import { css, SerializedStyles } from '@emotion/react'
+import styled from '@emotion/styled'
+import { MouseEvent } from 'react'
+import { boxShadow, transition } from '@/components/styles'
+import { AppTheme } from '@/styles/themes'
 
-export type Color = "primary" | "secondary" | "danger" | "warning";
+export type Color = 'primary' | 'secondary' | 'danger' | 'warning'
 
 export type Props = {
-  children: string;
-  color?: Color;
-  onClick: (event: MouseEvent<HTMLButtonElement>) => void;
-};
+  children: string
+  color?: Color
+  onClick: (event: MouseEvent<HTMLButtonElement>) => void
+}
 
 export const getColors = (theme: AppTheme, color?: Color): SerializedStyles => {
   switch (color) {
-    case "secondary":
+    case 'secondary':
       return css`
         color: ${theme.font.regular};
-      `;
-    case "primary":
-    case "danger":
+      `
+    case 'primary':
+    case 'danger':
       return css`
         background: ${theme.components[color]};
         color: ${theme.font.button};
-      `;
-    case "warning":
+      `
+    case 'warning':
       return css`
         background: ${theme.components[color]};
         color: ${theme.font.warning};
-      `;
+      `
     default:
-      return css``;
+      return css``
   }
-};
+}
 
 const Button = styled.button<Props>`
   all: unset;
@@ -56,10 +56,10 @@ const Button = styled.button<Props>`
     ${({ theme }) =>
       boxShadow(theme.components.shadow1, theme.components.shadow2, true)}
   }
-`;
+`
 
 Button.defaultProps = {
-  color: "primary",
-};
+  color: 'primary',
+}
 
-export default Button;
+export default Button

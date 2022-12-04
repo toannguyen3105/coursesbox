@@ -1,4 +1,4 @@
-import { css } from "@emotion/react";
+import { css } from '@emotion/react'
 
 // https://github.com/styled-components/styled-components/issues/397
 const boxShadow = (
@@ -6,16 +6,16 @@ const boxShadow = (
   shadowColor2: string,
   inset = false
 ) => {
-  const insetStr = inset ? "inset" : "";
+  const insetStr = inset ? 'inset' : ''
   return css`
     box-shadow: ${insetStr} 0.5vmin 0.5vmin 1vmin ${shadowColor1},
       ${insetStr} -0.5vmin -0.5vmin 1vmin ${shadowColor2};
-  `;
-};
+  `
+}
 
 const transition = () =>
   css`
     transition: all 0.4s ease;
-  `;
+  `
 
-export { boxShadow, transition };
+export { boxShadow, transition }
