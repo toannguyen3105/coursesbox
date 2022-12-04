@@ -6,13 +6,12 @@ export type AvailableIcons = keyof typeof Icons
 
 type WrapperProps = {
   // Width and height
-  size: string
+  size?: string
 }
 
 export type Props = {
   // Icon name
   name: AvailableIcons
-  size: string
 } & WrapperProps &
   React.SVGProps<SVGSVGElement>
 
