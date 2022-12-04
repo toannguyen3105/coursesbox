@@ -1,14 +1,17 @@
 import { css, SerializedStyles } from '@emotion/react'
 import styled from '@emotion/styled'
 import { MouseEvent } from 'react'
-import { boxShadow, transition } from '@/components/styles'
+import { boxShadow, transition, borderRadius } from '@/components/styles'
 import { AppTheme } from '@/styles/themes'
 
 export type Color = 'primary' | 'secondary' | 'danger' | 'warning'
 
 export type Props = {
+  // Text in the button
   children: string
+  // Button color
   color?: Color
+  // Click handler
   onClick: (event: MouseEvent<HTMLButtonElement>) => void
 }
 
@@ -44,8 +47,8 @@ const Button = styled.button<Props>`
   font-size: 1.6rem;
   width: 15rem;
   height: 4rem;
-  border-radius: 1rem;
-  ${transition()}
+  ${borderRadius}
+  ${transition}
   ${({ color, theme }) => getColors(theme, color)}
   ${({ theme }) =>
     boxShadow(theme.components.shadow1, theme.components.shadow2)}

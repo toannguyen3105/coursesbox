@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tile test cases Tile render check 1`] = `
+<DocumentFragment>
+  <section
+    class="css-g8h8xw"
+  >
+    <h2>
+      Lorem ipsum dolor sit amet
+    </h2>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, mollitia?
+  </section>
+</DocumentFragment>
+`;

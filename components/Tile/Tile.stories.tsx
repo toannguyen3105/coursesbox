@@ -1,5 +1,7 @@
+import { expect } from '@storybook/jest'
 import { ComponentMeta, ComponentStoryObj } from '@storybook/react'
 import Tile from './Tile'
+import { screen } from '@storybook/testing-library'
 
 export default {
   title: 'Content/Tile',
@@ -7,6 +9,9 @@ export default {
 } as ComponentMeta<typeof Tile>
 
 export const BasicTile: ComponentStoryObj<typeof Tile> = {
+  play: async ({ args }) => {
+    expect(screen.getByRole('heading')).toBeInTheDocument()
+  },
   args: {
     header: 'lorem ipsum dolor sit amet',
     children:
