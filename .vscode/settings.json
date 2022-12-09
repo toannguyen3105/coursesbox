@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["coursesbox", "unoptimized"],
+  "cSpell.words": ["coursesbox", "testid", "unoptimized"],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
