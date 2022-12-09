@@ -20,6 +20,9 @@ const dark = {
     warning: '#5e5c64',
     valid: '#49fb4f',
     invalid: '#ff9ea5',
+    logo: '#ff9933',
+    logoShadow1: '#fed028',
+    logoShadow2: '#e93020',
   },
 }
 
@@ -42,6 +45,9 @@ const light: AppTheme = {
     warning: '#5e5c64',
     valid: '#198754',
     invalid: '#dc3545',
+    logo: '#fff',
+    logoShadow1: '#000',
+    logoShadow2: '#6d5dfc',
   },
 }
 
