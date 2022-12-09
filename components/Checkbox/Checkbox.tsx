@@ -1,6 +1,7 @@
+import { useId } from '@/components/hooks/useId'
 import { boxShadow, transition } from '@/components/styles'
 import styled from '@emotion/styled'
-import { ChangeEvent, FC, useRef } from 'react'
+import { ChangeEvent, FC } from 'react'
 
 const Wrapper = styled.label`
   display: inline-block;
@@ -41,9 +42,7 @@ type Props = {
 }
 
 export const Checkbox: FC<Props> = ({ onChange }) => {
-  const { current: fieldId } = useRef(
-    `prefix-${Math.random().toString(16).slice(2)}`
-  )
+  const fieldId = useId()
   return (
     <Wrapper>
       <input id={fieldId} type="checkbox" onChange={onChange} />
