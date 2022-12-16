@@ -3,7 +3,8 @@
 exports[`Icon test cases Icon render check 1`] = `
 <DocumentFragment>
   <div
-    class="css-htxmi3"
+    class="css-1pp0bbu"
+    size="2"
   >
     <svg
       fill="currentColor"
